@@ -1,0 +1,426 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From The Streets of Hong Kong.</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('Font/Hirosaki.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #702a4d, #1b314e);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        header {
+            background-image: url('pix/CultureBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 150px 20px 20px;
+            text-align: center;
+        }
+
+        .neonText {
+            color: #fff;
+            font-family: 'CustomFont', 'Quicksand', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .neonEffect {
+            animation: flicker 2s infinite alternate;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #692b48, #1a2f4b);
+        }
+
+        .page-content {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-image: url('pix/CultureBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+				.signature {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.signature img {
+    width: 150px;
+    height: auto;
+}
+@keyframes flickerPink {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 1px #fff,
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 15px #ff6eff,
+        0 0 35px #ff6eff,
+        0 0 40px #ff6eff,
+        0 0 45px #ff6eff,
+        0 0 70px #ff6eff;
+       }
+        20%, 55% {
+        text-shadow: none;
+       }
+       }
+
+      .neonEffectPink {
+       animation: flickerPink 2s infinite alternate;
+       }
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 7px #fff, 0 0 15px #0fa, 0 0 35px #0fa, 0 0 40px #0fa, 0 0 45px #0fa, 0 0 70px #0fa;
+            }
+
+            20%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .container {
+            margin-top: 20vh;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1b314e;
+            min-width: 160px;
+            z-index: 1;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .circle-bottom-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 150px; 
+        }
+
+        .circle {
+            width: 100px; 
+            height: 100px; 
+            background-color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: box-shadow 0.3s ease; 
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-container {
+            width: 95%; /* Increased width */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .carousel-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 800px; /* Increased width */
+            margin: 0 auto;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-slide .slide-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .carousel-slide .slide-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+			font-size: 20px;
+			flex-direction: column;
+        }
+
+        .carousel-slide.active .slide-text {
+            display: flex;
+        }
+
+        .carousel-buttons {
+            margin-top: 10px;
+        }
+
+        .carousel-button {
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            color: #fff;
+            padding: 12px 24px; 
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .carousel-button:hover,
+        .carousel-button:active {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            animation: flicker 1s infinite;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home.</a>
+        <a href="me.html">Me.</a>
+        <div class="dropdown">
+            <button class="dropbtn">City. &#9662;</button>
+            <div class="dropdown-content">
+                <a href="life.html">Life.</a>
+                <a href="spots.html">Spots.</a>
+                <a href="districts.html">Districts.</a>
+            </div>
+        </div>
+        <a class="neonEffect" href="culture.html">Culture.</a>
+        <a href="people.html">People.</a>
+    </nav>
+    <header>
+        <h1 class="neonText neonEffect">From The Streets of Hong Kong.</h1>
+    </header>
+    <main>
+        <div class="page-content">
+            <h2><span class="neonText neonEffect">Culture</span> of the <span class="neonText neonEffect"> City.</span></h2>
+            <p>Hong Kong's culture is a unique blend of Chinese and Western influences.</p>
+            <p>A highly cosmopolitan city, with people from all over the world living and working together.</p>
+            <p>This diversity is reflected in Hong Kong's culture, which is rich in festivals, traditions, and food from around the world.</p>
+			<p>Click through the slides. They're Hong Kong's cultural staples.</p>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-slider">
+                <div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide1.jpg" alt="Slide 1">
+                    <div class="slide-text">
+                        <p>If you ask people what dish comes to mind when you say "Hong Kong", the answer is probably <span class="neonText neonEffectPink">Dim Sum</span> over half the time.</p>
+						<p>Characterized by dumplings, savory buns, and flavorful small bites.</p>
+						<p>It's a symbol of communal dining and tradition.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide2.jpg" alt="Slide 2">
+                    <div class="slide-text">
+                        <p>Next up is what most tourists don't notice when they walk around the city.</p>
+						<p>Bustling sidewalks lined with <span class="neonText neonEffectPink">street food</span>.</p>
+						<p>With iconic choices such as Gai Daan Jai [egg waffles], Ngau Yuk Che [beef skewers], Cheung Fun [rice rolls], Gaa Lei Yu Dan [curry balls] & more.</p>
+                    </div>
+                </div>
+				<div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide3.jpg" alt="Slide 3">
+                    <div class="slide-text">
+                        <p>Symbolizing joy and good fortune, the festivals of the city are always lit up by hundrends of <span class="neonText neonEffectPink">Chinese Lanterns</span>.</p>
+						<p>Intricate designs & bright colors are the first things you notice when you look at them.</p>
+						<p>Commonly seen during Hong Kong's Mid-Autumn Festival when families gather outside and share mooncakes.</p>
+                    </div>
+                </div>
+				<div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide4.jpg" alt="Slide 4">
+                    <div class="slide-text">
+                        <p>A photo of a costume held up by multiple artists. <span class="neonText neonEffectPink">The Lion Dance</span>.</p>
+						<p>Combining artistry, acrobatics and cultural symbolism, the dance needs two performers to either be in the costume or hold it up. They make the lion move in a dynamic way while following a rythm.</p>
+						<p>A combination of cymbals, drums and gongs, the lion is believed to bring prosperity and protection from evil spirits. Typically performed during the Chinese New Year.</p>
+                    </div>
+                </div>
+				<div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide5.jpg" alt="Slide 5">
+                    <div class="slide-text">
+                        <p>Towering skyscrapers fusing and coexisting with traditional Chinese buildings.</p>
+						<p>That's what makes up the city's <span class="neonText neonEffectPink">Iconic Skyline</span>. A testament to it's dynamic and cosmopolitan identity.</p>
+						<p>It's what I look to when asked about architecture.</p>
+                    </div>
+                </div>
+				<div class="carousel-slide" onclick="toggleContent(this)">
+                    <img class="slide-image" src="Pix/slide6.jpg" alt="Slide 6">
+                    <div class="slide-text">
+                        <p>This is the Chi Lin Nunnery, one of Hong Kong's many <span class="neonText neonEffectPink">Temples</span>. It shows how heavily believe in embracing and preserving tradition.</p>
+						<p>For tourists and residents alike, it's a glimpse into the the city's past buildings.</p>
+						<p>From the iconic Wong Tai Sin Temple to the historic Man Mo Temple, these sacred spaces provide a harmonious blend of tradition and modernity within the vibrant tapestry of Hong Kong's cultural landscape.</p>
+                    </div>
+                </div>
+				</div>
+            <div class="carousel-buttons">
+                <button class="carousel-button" onclick="prevSlide()">Previous</button>
+                <button class="carousel-button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <div class="circle-bottom-container">
+            <div class="circle" onclick="showPopup('The city is famous for a variety of delicious dishes, including dim sum, wonton noodles, roast duck, and egg tarts. Street food is also popular, with snacks like  tofu, fish balls, and egg waffles sold at stalls and carts throughout the city.')">
+                <img src="Pix/ico1.jpg" alt="Image 1">
+            </div>
+            <div class="circle" onclick="showPopup('The city celebrates a number of traditional Chinese festivals throughout the year, such as Chinese New Year, Mid-Autumn Festival, and Cheung Chau Bun Festival. These festivals are often marked with colorful parades, performances, and religious ceremonies.')">
+                <img src="Pix/ico2.jpg" alt="Image 2">
+            </div>
+            <div class="circle" onclick="showPopup('The city skyline is dominated by skyscrapers, with a number of traditional Chinese buildings and temples. Some of the most popular tourist attractions include Victoria Peak, the Man Mo Temple, and the Wong Tai Sin Temple.')">
+                <img src="Pix/ico3.jpg" alt="Image 3">
+            </div>
+        </div>
+
+        <a href="contact.html" class="button">Contact.</a>
+    </main>
+	<footer class="footer neonText neonEffectPink">
+        IT0043L / Marcelino, Luis Abiel P. / 202011201
+    </footer>
+
+    <script>
+        function showPopup(message) {
+            alert(message);
+        }
+
+        const slider = document.querySelector('.carousel-slider');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            currentSlide = index;
+            const translateValue = -index * slider.offsetWidth;
+            slider.style.transform = `translateX(${translateValue}px)`;
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < slider.children.length - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+
+        function toggleContent(slide) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            slides.forEach(s => s.classList.remove('active'));
+            slide.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
