@@ -1,0 +1,304 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From The Streets of Hong Kong.</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('Font/Hirosaki.ttf') format('truetype');
+        }
+    body {
+        font-family: 'Quicksand', sans-serif;
+        background: linear-gradient(135deg, #4a162b, #141822);
+        margin: 0;
+        padding: 0;
+        color: #fff;
+    }
+        nav {
+            background: linear-gradient(135deg, #4a162b, #141822);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header {
+            background-image: url('pix/LifeBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 150px 20px 20px;
+            text-align: center;
+        }
+        .neonText {
+            color: #fff;
+            font-family: 'CustomFont', 'Quicksand', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .neonEffect {
+            animation: flicker 2s infinite alternate;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #692b48, #1a2f4b);
+        }
+        .page-content {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-image: url('pix/LifeBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+				.signature {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.signature img {
+    width: 150px;
+    height: auto;
+}
+				@keyframes flickerPink {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+        0 0 1px #fff,
+        0 0 3px #fff,
+        0 0 7px #fff,
+        0 0 15px #ff6eff,
+        0 0 35px #ff6eff,
+        0 0 40px #ff6eff,
+        0 0 45px #ff6eff,
+        0 0 70px #ff6eff;
+       }
+        20%, 55% {
+        text-shadow: none;
+       }
+       }
+
+      .neonEffectPink {
+       animation: flickerPink 2s infinite alternate;
+       }
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow:
+                0 0 1px #fff,
+                0 0 3px #fff,
+                0 0 7px #fff,
+                0 0 15px #0fa,
+                0 0 35px #0fa,
+                0 0 40px #0fa,
+                0 0 45px #0fa,
+                0 0 70px #0fa;
+            }
+            20%, 55% {
+                text-shadow: none;
+            }
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 5vw);
+            grid-gap: 15px;
+        }
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gallery__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 12;
+        }
+        .gallery__item--2 {
+            grid-column-start: 6;
+            grid-column-end: 13;
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+        .gallery__item--3 {
+            grid-column-start: 6;
+            grid-column-end: 13;
+            grid-row-start: 6;
+            grid-row-end: 12;
+        }
+        .gallery input[type="checkbox"] {
+            display: none;
+        }
+
+    .gallery label {
+        position: relative;
+        cursor: pointer;
+        font-size: 2vw;
+    }
+
+        .gallery .text-box {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1em; 
+        }
+
+        .gallery input[type="checkbox"]:checked + label .text-box {
+            display: block;
+            opacity: 1;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif; 
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1b314e;
+            min-width: 160px;
+            z-index: 1;
+            font-family: 'Quicksand', sans-serif; 
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Quicksand', sans-serif; 
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<nav>
+        <a href="home.html">Home.</a>
+        <a href="me.html">Me.</a>
+        <div class="dropdown">
+            <button class="dropbtn">City. &#9662;</button>
+            <div class="dropdown-content">
+                <a class="neonEffectPink" href="life.html">Life.</a>
+                <a href="spots.html">Spots.</a>
+                <a href="districts.html">Districts.</a>
+            </div>
+        </div>
+        <a href="culture.html">Culture.</a>
+        <a href="people.html">People.</a> 
+    </nav>
+    <header>
+        <h1 class="neonText neonEffectPink">From The Streets of Hong Kong.</h1>
+    </header>
+    <main>
+        <div class="page-content">
+            <h2><span class="neonText neonEffectPink">Life</span> in the <span class="neonText neonEffectPink"> City.</span></h2>
+            <p>Switching the theme. Let's be a little more realistic.</p>
+            <p>You probably noticed already but these photos have a depressing feeling to them.</p>
+            <p>I love the city. But it isn't all bright and happy. There are levels to it. You can click the photos for more info.</p>
+        </div>
+        <div class="gallery">
+            <input type="checkbox" id="image-1-checkbox">
+            <label for="image-1-checkbox" class="gallery__item gallery__item--1">
+                <img class="gallery__img" src="pix/life1.jpg" alt="Image 1">
+                <div class="text-box">
+                    <p class="neonText neonEffect">Money Hungry?</p>
+                    <p>Pretty self explanatory. If you're loaded, Hong Kong is the place for you.</p>
+					<p>If you're one of us. Who fall into the lower working class, it isn't the best. Because without $$$, you won't be enjoying much of the city. You turn into an observer just watching luxury around you.</p> 
+					<p>If you're reading this and have paid for a trip there in the past, you would probably agree with me too.</p>
+                </div>
+            </label>
+            <input type="checkbox" id="image-2-checkbox">
+            <label for="image-2-checkbox" class="gallery__item gallery__item--2">
+                <img class="gallery__img" src="pix/life2.jpg" alt="Image 2">
+                <div class="text-box">
+                    <p class="neonText neonEffect">Fast?</p>
+                    <p>I say it's fast-paced cause everyone just goes about their buiseness. Everything is scheduled. Buses, trains, stoplights. Everything is just timed. It's as if there's nothing spontaneous about the city.</p>
+					<p>The city streets are a constant reminder of its pace too. People are always on the move. It's a metropolis for sure. But it's a relentless one.</p>
+                </div>
+            </label>
+            <input type="checkbox" id="image-3-checkbox">
+            <label for="image-3-checkbox" class="gallery__item gallery__item--3">
+                <img class="gallery__img" src="pix/life3.jpg" alt="Image 3">
+                <div class="text-box">
+                    <p class="neonText neonEffect">Exhausting?</p>
+                    <p>As reported by Randstad Hong Kong in 2022; A total of 66% of Hong Kongers have  poor work-life balance, largely due to unnecessary and excessive overtime. Right now, it's known as the MOST overworked city in the world.</p>
+					<p>I think that says a lot about how people live there. Also proves my point about how you won't be enjoying the city without cash.</p>
+                </div>
+            </label>
+        </div>
+        <a href="contact.html" class="button">Contact.</a>
+    </main>
+    <footer class="footer neonText neonEffect">
+        IT0043L / Marcelino, Luis Abiel P. / 202011201
+    </footer>
+</body>
+</html>

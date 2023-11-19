@@ -1,0 +1,345 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From The Streets of Hong Kong.</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('Font/Hirosaki.ttf') format('truetype');
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        nav {
+            background: linear-gradient(135deg, #702a4d, #1b314e);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        header {
+            background-image: url('pix/PeopleBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            padding: 150px 20px 20px;
+            text-align: center;
+        }
+        .neonText {
+            color: #fff;
+            font-family: 'CustomFont', 'Quicksand', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .neonEffect {
+            animation: flicker 2s infinite alternate;
+        }
+        .main {
+            padding: 20px;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #8a3e5b, #233b5f);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: linear-gradient(135deg, #692b48, #1a2f4b);
+        }
+        .page-content {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background-image: url('pix/PeopleBF.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+				.signature {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.signature img {
+    width: 150px;
+    height: auto;
+}
+        @keyframes flickerPink {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow:
+                0 0 1px #fff,
+                0 0 3px #fff,
+                0 0 7px #fff,
+                0 0 15px #ff6eff,
+                0 0 35px #ff6eff,
+                0 0 40px #ff6eff,
+                0 0 45px #ff6eff,
+                0 0 70px #ff6eff;
+            }
+            20%, 55% {
+                text-shadow: none;
+            }
+        }
+
+        .neonEffectPink {
+            animation: flickerPink 2s infinite alternate;
+        }
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% {
+                text-shadow:
+                0 0 1px #fff,
+                0 0 3px #fff,
+                0 0 7px #fff,
+                0 0 15px #0fa,
+                0 0 35px #0fa,
+                0 0 40px #0fa,
+                0 0 45px #0fa,
+                0 0 70px #0fa;
+            }
+            20%, 55% {
+                text-shadow: none;
+            }
+        }
+        h2 {
+            font-size: 1.8rem;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        h1, h2 {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item {
+    position: relative;
+    perspective: 1000px;
+    transition: box-shadow 0.5s ease;
+}
+.text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-size: 1em;
+}
+.gallery__item:hover .text-box {
+    opacity: 4;
+}
+
+        .gallery input[type="checkbox"] {
+            display: none;
+        }
+
+.gallery label {
+    position: relative;
+    cursor: pointer;
+    font-size: 2vw;
+}
+@media screen and (max-width: 768px) {
+    .text-box {
+        font-size: 0.8em;
+    }
+}
+        .gallery input[type="checkbox"]:checked + label .text-box {
+            opacity: 1;
+        }
+		.gallery input[type="checkbox"]:checked + label {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+        .gallery input[type="checkbox"]:checked + label .gallery__img {
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropbtn {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #1b314e;
+            min-width: 160px;
+            z-index: 1;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home.</a>
+        <a href="me.html">Me.</a>
+        <div class="dropdown">
+            <button class="dropbtn">City. &#9662;</button>
+            <div class="dropdown-content">
+                <a href="life.html">Life.</a>
+                <a href="spots.html">Spots.</a>
+                <a href="districts.html">Districts.</a>
+            </div>
+        </div>
+        <a href="culture.html">Culture.</a>
+        <a class="neonEffect" href="people.html">People.</a> 
+    </nav>
+    <header>
+        <h1 class="neonText neonEffect">From The Streets of Hong Kong.</h1>
+    </header>
+    <main class="main">
+        <div class="page-content">
+            <h2><span class="neonText neonEffect">People</span> of the <span class="neonText neonEffect"> City.</span></h2>
+            <p>Like I said, we're not all Chinese. Hong Kong is filled with people from different countries.</p>
+            <p>At this point, you've already seen Hong Kong's streets. So to represent other nationalities, I'll use photos of their streets.</p>
+            <p>Information on their numbers were from the 2021 population census of the Hong Kong Government. Hover or click through the photos for their information.</p>
+                <div class="gallery">
+                <input type="checkbox" id="item1">
+                <label for="item1" class="gallery__item gallery__item--1">
+                    <img src="pix/people1.jpg" alt="Image 1" class="gallery__img">
+                    <div class="text-box">
+                        <p class="neonText neonEffectPink">Indonesians.</p>
+						<p>Mostly domestic employees across the city, they contribute significantly to the city's workforce.</p>
+						<p>Despite challenges, their community plays a vital role in the daily lives of some residents.</p>
+						<p>At around 142,000 [23%], they're the 3nd largest ethnic group in the city.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item2">
+                <label for="item2" class="gallery__item gallery__item--2">
+                    <img src="pix/people2.jpg" alt="Image 2" class="gallery__img">
+                    <div class="text-box">
+					    <p class="neonText neonEffectPink">Westerners.</p>
+                        <p>It's simply what the city calls people from the USA, Canada, Australia and Europe.</p>
+						<p>Mostly expats who visit for finance and trade. They reflect the city's historical connection to the British Colonial period.</p>
+						<p>There are around 62,000 [10%] of them in Hong Kong. Making them the 4th largest ethnic group of the city.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item3">
+                <label for="item3" class="gallery__item gallery__item--3">
+                    <img src="pix/people3.jpg" alt="Image 3" class="gallery__img">
+                    <div class="text-box">
+                        <p class="neonText neonEffectPink">Indians.</p>
+						<p>Drawn for employment in finance, IT and Hospitality.</p>
+						<p>They have established organizations that provide support and maintain a strong sense of identity to their community.</p>
+						<p>At around 43,000 {7%], they're 5th on the list in the number of ethnic groups.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item4">
+                <label for="item4" class="gallery__item gallery__item--4">
+                    <img src="pix/people4.jpg" alt="Image 4" class="gallery__img">
+                    <div class="text-box">
+                        <p class="neonText neonEffectPink">Nepalis.</p>
+						<p>Despite challenges, language barriers and cultural adjustments, this close-knit community established support networks and organizations to provide assistance and foster a sense of belonging to their own.</p>
+						<p>There are around 30,000 of them in the city. Making them 6th on the list in ethnic group numbers.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item5">
+                <label for="item5" class="gallery__item gallery__item--5">
+                    <img src="pix/people5.jpg" alt="Image 5" class="gallery__img">
+                    <div class="text-box">
+                        <p class="neonText neonEffectPink">Pakistanis.</p>
+						<p>Known for their presence in finance, trade, and construction.</p>
+						<p>While facing challenges of adaptation, many of them still actively engage in cultural and religious practices.</p>
+						<p>At an estimated number of 24,000 [4%], they're 7th on the list in the number of ethnic groups.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item6">
+                <label for="item6" class="gallery__item gallery__item--6">
+                    <img src="pix/people6.jpg" alt="Image 6" class="gallery__img">
+                    <div class="text-box">
+                        <p class="neonText neonEffectPink">Filipinos.</p>
+						<p> Around 201,000 [32%]. The 2nd largest ethnic group in Hong Kong.</p>
+						<p>Most of them are domestic workers. Playing a crucial role in both Philippine and Hong Kong economies through remittances.</p>
+						<p>Maintaining a link to the Philippines seems to be a priority for them.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item7">
+                <label for="item7" class="gallery__item gallery__item--7">
+                    <img src="pix/people7.jpg" alt="Image 7" class="gallery__img">
+                    <div class="text-box">
+                        <p>There are other nationalities residing in the city. People from Thailand, Africa, Japan, the Mainland and more.</p>
+						<p>Majority of the residents are in fact Chinese but it's one of the most diverse cities out there.</p>
+						<p>It's evident in the neighborhoods, cuisines, languages, and cultural events that are celebrated.</p>
+                    </div>
+                </label>
+                <input type="checkbox" id="item8">
+                <label for="item8" class="gallery__item gallery__item--8">
+                    <img src="pix/people8.jpg" alt="Image 8" class="gallery__img">
+                    <div class="text-box">
+                        <p>The city's global status as a financial and cultural hub continues to attract individuals from around the globe, contributing to the richness of its multicultural identity.</p>
+						<p>So if I'm ever asked what Hong Kong does best, it's:</p>
+						<p class="neonText neonEffectPink">CO-EXIST.</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <a href="contact.html" class="button">Contact.</a>
+    </main>
+    <footer class="footer neonText neonEffectPink">
+        IT0043L / Marcelino, Luis Abiel P. / 202011201
+    </footer>
+</body>
+</html>
